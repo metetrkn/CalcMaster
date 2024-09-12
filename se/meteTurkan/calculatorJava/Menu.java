@@ -1,0 +1,14 @@
+package se.meteTurkan.calculatorJava;
+
+public class Menu {
+    /**
+     * CREATE A USER FRIENDLY
+     * CLI MENU FOR USER
+     * THAT WILL WELCOMING
+     * PROMPT USER TO INPUT
+     * CAN MAKE CALCULATIONS BASED
+     * ON THE LAST RESULT SHOWN ON
+     * THE SCREEN, JUST LIKE REAL CALCULATOR
+     * USE ENCAPSULATION GET AND SET METHODS
+     */
+}
