@@ -4,78 +4,64 @@ package se.meteTurkan.calculatorJava;
 public class Calculator {
     // Result on screen block
     private double result = 0;
+
+    // Set method
     public void setResult(double result) {
         this.result = result;
     }
+
+    // Get method
     public double getResult() {
         return this.result;
     }
 
-    // Private functions with their public - encapsulation
-    private double add(double num1, double num2) {
-        return num1 + num2;
-    }
-    public double add_(double num1, double num) {
-        return add(num1, num);
+    // Addition
+    public double add(double num) {
+        result += num;
+        return getResult();
     }
 
-    private double subtract(double num1, double num2) {
-        return num1 - num2;
-    }
-    public double subtract_(double num1, double num2) {
-        return subtract(num1, num2);
-    }
-
-    public double multiply(double num1, double num2) {
-        return num1 * num2;
-    }
-    private double multiply_(double num1, double num2) {
-        return multiply(num1, num2);
+    // Subtraction
+    public double subtract(double num) {
+        result -= num;
+        return getResult();
     }
 
-    private double divide(double num1, double num2) {
-        return num1 / num2;
+    public double multiply(double num) {
+        result *= num;
+        return getResult();
     }
-    public double divide_(double num1, double num2) {
-        return divide(num1, num2);
+
+    public double divide(double num) {
+        result /= num;
+        return getResult();
     }
 
     // radix = baseDigit, radical = n-th root
-    private double Root(double radix_, double radical_) {
-        return Math.pow(radix_, 1.0 / radical_);
-    }
-    public double Root_(double radix_, double radical_) {
-        return Root(radix_, radical_);
+    public double Root(double radical_) {
+        result = Math.pow(result, 1.0 / radical_);
+        return getResult();
     }
 
-    private double exponentiation(double base_, double exponent_) {
-        return Math.pow(base_, exponent_);
-    }
-    public double exponentiation_(double base_, double exponent_) {
-        return exponentiation(base_, exponent_);
+    public double exponentiation(double exponent_) {
+        result = Math.pow(result, exponent_);
+        return getResult();
     }
 
-    // Retuns pi value
-    private double piValue() {
-        return Math.PI;
-    }
-    public double piValue_() {
-        return piValue();
+    // Multiply with pi value
+    public double piMultiply() {
+        result *= Math.PI;
+        return result;
     }
 
     // To reset result screen
-    private void setNull() {
+    public void setNull() {
         this.result = 0.0;
-    }
-    public void setNull_() {
-        setNull();
     }
 
     // Modulus operator - gets remaining
-    private double getRemaining(double num1, double num2) {
-        return num1 % num2;
-    }
-    public double getRemaining_(double num1, double num2) {
-        return getRemaining(num1, num2);
+    public double getRemaining(double num) {
+        result %= num;
+        return getResult();
     }
 }
