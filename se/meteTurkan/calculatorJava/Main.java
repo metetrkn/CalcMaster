@@ -3,10 +3,8 @@ package se.meteTurkan.calculatorJava;
 
 public class CalculatorExercise {
     public static void main(String[] args) {
-        Menu menu = new Menu(); // Instantiation of menu class
-        menu.welcoming();
-
-
+        Menu menu = new Menu(); // Creating menu object
+        menu.init(); // Initialising menu
 
         if (menu.key) {
 
