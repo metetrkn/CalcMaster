@@ -1,3 +1,5 @@
+package se.meteTurkan.calculatorJava;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -8,16 +10,22 @@ public class InputCheck {
 
         do {
             try {
-                System.out.printf("Press [%i-%i] to make operations.\n", minOption, maxOption); // Prompt user to input
+                System.out.printf("Press [%d-%d] to make operations.\n", minOption, maxOption); // Prompt user to input
                 choice = myInput.nextInt(); // Read user input
-                // No need for if statement; validation is handled by the while condition
-            } catch (InputMismatchException e) { // Catch block to handle InputMismatchException
-                System.out.printf("Invalid input. Please enter an integer between %i and %i.\n", minOption, maxOption); // Print error message
-                myInput.next(); // Clear the invalid input from the scanner
-                choice = -1; // Reset choice to continue loop
-            }
-        } while (choice <= minOption || choice >= minOption); // Continue loop while input is not between 1 and 9
 
-        return choice; // Checker funk returns user choice
+                if (choice >= minOption && choice <= maxOption) { // Check if input is within range
+                    break; // Exit loop if valid input
+                } else {
+                    System.out.printf("Invalid input. Please enter an integer between %d and %d.\n", minOption, maxOption); // Print error message
+                }
+            } catch (InputMismatchException e) { // Catch block to handle InputMismatchException
+                System.out.printf("Invalid input. Please enter an integer between %d and %d.\n", minOption, maxOption); // Print error message
+                myInput.next(); // Clear the invalid input from the scanner
+            }
+        } while (true); // Continue loop indefinitely until valid input
+
+        return choice; // Return user choice
     }
 }
+
+
