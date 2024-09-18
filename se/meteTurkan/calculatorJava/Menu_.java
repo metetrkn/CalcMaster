@@ -1,9 +1,8 @@
 package se.meteTurkan.calculatorJava;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu {
+public class Menu_ {
     boolean key = false; // Key to enter into calculator
 
     public void init(){
@@ -67,7 +66,7 @@ public class Menu {
         Scanner userInput = new Scanner(System.in); // User input object
 
         // Calling Input Checker to check if user input a valid option
-        InputCheck inputC = new InputCheck(); // Creating object
+        OptionController inputC = new OptionController(); // Creating object
         int input = inputC.checker(0,1); //Checking user option (0,1) - possible min,max value
 
         // The user either logs in to the system or exits.

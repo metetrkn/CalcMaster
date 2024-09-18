@@ -3,7 +3,7 @@ package se.meteTurkan.calculatorJava;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class InputCheck {
+public class OptionController {
     public int checker(int minOption, int maxOption) {
         Scanner  myInput = new Scanner(System.in); // Creating scanner object
         int choice = -1;

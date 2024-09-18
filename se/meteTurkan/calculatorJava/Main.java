@@ -3,7 +3,7 @@ package se.meteTurkan.calculatorJava;
 
 public class Main {
     public static void main(String[] args) {
-        Menu menu = new Menu(); // Creating menu object
+        Menu_ menu = new Menu_(); // Creating menu object
         menu.init(); // Initialising menu
 
         calcScreen screen = new calcScreen();
@@ -12,3 +12,10 @@ public class Main {
         }
     }
 }
+
+/**
+ * CHANGE SETNUL() AND MULTIPLYPI() FUNC
+ * FUNCTIONS WORKS WELL BUT
+ * IT SHOULD NOT ASK 2ND QUESTION
+ * JUST CONTINUE TO ASK IN ORDER
+ */
