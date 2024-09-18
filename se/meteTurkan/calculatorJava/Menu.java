@@ -16,7 +16,8 @@ public class Menu {
         System.out.println(
                 "\n1. Addition                2. Subtraction           3. Multiplication\n" +
                         "4. Division                5. Root Extraction       6. Exponentiation\n" +
-                        "7. Multiply with PI        8. Modulus               9. Resetting Result Screen\n");
+                        "7. Multiply with PI        8. Modulus               9. Resetting Result Screen\n" +
+                        "0. To exit");
 
     }
 
