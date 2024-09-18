@@ -1,17 +1,18 @@
 package se.meteTurkan.calculatorJava;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class DigitController {
-    public double init() {
+    public BigDecimal init() {
         // Get user input
         String userInput = getUserInput();
 
         // Remove trailing zeros
         String result = removeTrailingZeros(userInput);
 
-        // Converting string result into double
-        return Double.parseDouble(result);
+        // Convert string result into BigDecimal
+        return new BigDecimal(result);
     }
 
     // Method to remove trailing zeros from the decimal part of a number string
