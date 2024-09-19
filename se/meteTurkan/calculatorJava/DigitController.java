@@ -28,7 +28,6 @@ public class DigitController {
         boolean valid;
 
         do {
-            System.out.println("Please enter a valid number (only digits and at most one dot):");
             input = scanner.nextLine();
 
             // Check if input is valid

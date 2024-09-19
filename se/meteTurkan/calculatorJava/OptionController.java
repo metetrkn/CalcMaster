@@ -24,6 +24,23 @@ public class OptionController {
             }
         } while (true); // Continue loop indefinitely until valid input
 
+        // If user choose 0 "exit" as operator, it closes the system
+        if (choice == 0) {
+            String message = "\nExiting...\n";
+            int delay = 140; // Delay in milliseconds
+
+            // Looping through each char in message with thread
+            for (char c : message.toCharArray()) {
+                System.out.print(c);
+                try {
+                    Thread.sleep(delay);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+            System.exit(0); // Exits the program with a status code 0 (indicating normal termination)
+        }
+
         return choice; // Return user choice
     }
 }
