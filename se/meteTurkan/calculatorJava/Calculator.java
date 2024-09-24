@@ -1,6 +1,8 @@
 package se.meteTurkan.calculatorJava;
 
 
+import java.math.BigDecimal;
+
 public class Calculator {
     // Result on screen block
     private double result = 0;
@@ -48,12 +50,6 @@ public class Calculator {
         return getResult();
     }
 
-    // Multiply with pi value
-    public double piMultiply() {
-        result *= Math.PI;
-        return result;
-    }
-
     // To reset result screen
     public void setNull() {
         this.result = 0.0;
@@ -62,6 +58,11 @@ public class Calculator {
     // Modulus operator - gets remaining
     public double getRemaining(double num) {
         result %= num;
+        return getResult();
+    }
+
+    public double multiplyPI (double num) {
+        result *= Math.PI;
         return getResult();
     }
 }
