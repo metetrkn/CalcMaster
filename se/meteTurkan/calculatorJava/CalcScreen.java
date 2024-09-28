@@ -56,14 +56,14 @@ public class CalcScreen {
                     break;
                 }
                 case 3: {
-                    res = num.multiply(num2);
+                    res = cal.multiply(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;
                     break;
                 }
                 case 4: {
-                    res = num.divide(num2);
+                    res = cal.divide(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;
@@ -103,12 +103,12 @@ public class CalcScreen {
                     num = res;
                     break;
                 }
-                case 9: {
-                    cal.setNull();
-                    System.out.println("\nResult screen:  0");
-                    num = checkDigit.init(); // prompting user to input 1st digit
-                    break;
-                }
+//                case 9: {
+//                    cal.setNull();
+//                    System.out.println("\nResult screen:  0");
+//                    num = checkDigit.init(); // prompting user to input 1st digit
+//                    break;
+//                }
             }
         }
     }
