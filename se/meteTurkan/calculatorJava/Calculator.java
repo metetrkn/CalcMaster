@@ -8,9 +8,11 @@ public class Calculator {
     // Result on screen block
     private BigDecimal result;
 
+    MathContext mc = new MathContext(10); // Precision of 10 digits
+
     // Set method
-    public void setResult(double result) {
-        this.result = BigDecimal.valueOf(result);
+    public void setResult(BigDecimal result) {
+        this.result = result;
     }
 
     // Get method
@@ -18,28 +20,28 @@ public class Calculator {
         return this.result;
     }
 
-//    // Addition
-//    public double add(double num) {
-//        result += num;
-//        return getResult();
-//    }
+    // Addition
+    public BigDecimal add(BigDecimal num) {
+        result = result.add(num, mc);
+        return result;
+    }
 
-//    // Subtraction
-//    public double subtract(double num) {
-//        result -= num;
-//        return getResult();
-//    }
-//
-//    public double multiply(double num) {
-//        result *= num;
-//        return getResult();
-//    }
+    // Subtraction
+    public BigDecimal subtract(BigDecimal num) {
+        result = result.subtract(num, mc);
+        return result;
+    }
+
+    public BigDecimal  multiply(BigDecimal num) {
+        result = result.multiply(num, mc);
+        return result;
+    }
 
     public BigDecimal divide(BigDecimal num) {
-        MathContext mc = new MathContext(10); // Precision of 10 digits
         result = result.divide(num, mc);
         return result;
     }
+}
 
 //    // radix = baseDigit, radical = n-th root
 //    public double Root(double radical_) {
@@ -67,4 +69,4 @@ public class Calculator {
 //        result *= Math.PI;
 //        return getResult();
 //    }
-}
+

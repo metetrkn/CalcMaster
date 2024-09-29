@@ -24,7 +24,7 @@ public class CalcScreen {
 
 
         // Setting number on calculators result screen as 1st inputed digit
-        cal.setResult(num.doubleValue());
+        cal.setResult(num);
 
 
         // Keep continue operations until user closes
@@ -42,14 +42,14 @@ public class CalcScreen {
 
             switch (calOp) {
                 case 1: {
-                    res = num.add(num2);
+                    res = cal.add(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;
                     break;
                 }
                 case 2: {
-                    res = num.subtract(num2);
+                    res = cal.subtract(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;
@@ -76,13 +76,17 @@ public class CalcScreen {
                     num = res;
                     break;
                 }
-                case 6: {
-                    res = num.pow(num2.intValue());
-                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-                    num = res;
-                    break;
+//                case 6: {
+//                    res = cal.pow(num2.intValue());
+//                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
+//                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
+//                    num = res;
+//                    break;
                 }
+            }
+        }
+    }
+
 //                } case 7: {
 //                    /**
 //                     * pi ILE ISLEM YAP
@@ -96,21 +100,18 @@ public class CalcScreen {
 //                    menu.operationMenu();
 //                    num = res; /* !!!!!!!!!!!!!!!!!!!!!!!!!calisip calispmamisina göre bu kismi sil */
 //                    break;
-                case 8: {
-                    res = num.remainder(num2);
-                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-                    num = res;
-                    break;
-                }
+//                case 8: {
+//                    res = cal.remainder(num2);
+//                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
+//                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
+//                    num = res;
+//                    break;
+//                }
 //                case 9: {
 //                    cal.setNull();
 //                    System.out.println("\nResult screen:  0");
 //                    num = checkDigit.init(); // prompting user to input 1st digit
 //                    break;
 //                }
-            }
-        }
-    }
-}
+
 
