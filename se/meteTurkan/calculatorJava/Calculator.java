@@ -33,11 +33,13 @@ public class Calculator {
         return result;
     }
 
+    // Multiplication
     public BigDecimal  multiply(BigDecimal num) {
         result = result.multiply(num, mc);
         return result;
     }
 
+    // Dividing
     public BigDecimal divide(BigDecimal num) {
         result = result.divide(num, mc);
         return result;
@@ -50,6 +52,18 @@ public class Calculator {
         result = x.setScale(mc.getPrecision(), RoundingMode.HALF_UP);
         return result;
     }
+
+    // Modulus operator - gets remaining
+    public BigDecimal remainder(BigDecimal num) {
+        result = result.remainder(num);
+        return result;
+    }
+
+    // Exponential
+    public BigDecimal pow(BigDecimal num) {
+        result = result.pow(num.intValue(), mc);
+        return result;
+    }
 }
 
 
@@ -59,11 +73,7 @@ public class Calculator {
 //        this.result = 0.0;
 //    }
 //
-//    // Modulus operator - gets remaining
-//    public double getRemaining(double num) {
-//        result %= num;
-//        return getResult();
-//    }
+
 //
 //    public double multiplyPI (double num) {
 //        result *= Math.PI;
