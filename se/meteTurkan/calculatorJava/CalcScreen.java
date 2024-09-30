@@ -70,7 +70,7 @@ public class CalcScreen {
                     break;
                 }
                 case 5: {
-                    res = new BigDecimal(Math.sqrt(num.doubleValue()));
+                    res = cal.root(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;
@@ -82,11 +82,11 @@ public class CalcScreen {
 //                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
 //                    num = res;
 //                    break;
-                }
+//                }
             }
         }
     }
-
+}
 //                } case 7: {
 //                    /**
 //                     * pi ILE ISLEM YAP
