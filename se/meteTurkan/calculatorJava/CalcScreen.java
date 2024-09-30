@@ -1,7 +1,6 @@
 package se.meteTurkan.calculatorJava;
 
 import java.math.BigDecimal;
-import java.util.Scanner;
 
 public class CalcScreen {
     // Class attributes
@@ -76,13 +75,21 @@ public class CalcScreen {
                     num = res;
                     break;
                 }
-//                case 6: {
-//                    res = cal.pow(num2.intValue());
-//                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-//                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-//                    num = res;
-//                    break;
-//                }
+                case 6: {
+                    res = cal.pow(num2);
+                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
+                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
+                    num = res;
+                    break;
+                }
+                case 8: {
+                    res = cal.remainder(num2);
+                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
+                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
+                    num = res;
+                    break;
+                }
+
             }
         }
     }
@@ -100,13 +107,7 @@ public class CalcScreen {
 //                    menu.operationMenu();
 //                    num = res; /* !!!!!!!!!!!!!!!!!!!!!!!!!calisip calispmamisina göre bu kismi sil */
 //                    break;
-//                case 8: {
-//                    res = cal.remainder(num2);
-//                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-//                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-//                    num = res;
-//                    break;
-//                }
+
 //                case 9: {
 //                    cal.setNull();
 //                    System.out.println("\nResult screen:  0");
