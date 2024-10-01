@@ -48,21 +48,6 @@ public class Menu {
     }
 
 
-    // Farewelling menu
-    public void farewell() {
-        String[] goodbyeArt = {
-            "  _____ _                 _  ",
-            " |  ___| |               | | ",
-            " | |__ | | ___  __ _ _ __| | ",
-            " |  __|| |/ _ \\/ _` | '__| | ",
-            " | |___| |  __/ (_| | |  |_| ",
-            " \\____/|_|\\___|\\__,_|_|  (_) ",
-            "                             ",
-            "         Goodbye!            "
-    };
-    messagePrint(goodbyeArt);
-}
-
 public void explanation() {
         System.out.println(
                   """

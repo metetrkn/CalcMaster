@@ -39,11 +39,22 @@ public class Calculator {
         return getResult();
     }
 
-    // Dividing
+    // Dividing method
     public BigDecimal divide(BigDecimal num) {
-        result = result.divide(num, mc);
-        return getResult();
+        // Check for division by zero
+        if (num == null || num.compareTo(BigDecimal.ZERO) == 0) {
+            throw new ArithmeticException("Division by zero is not allowed.");
+
+            try {
+                // Perform division
+                result = result.divide(num, mc);
+            } catch (ArithmeticException e ) {
+                return getResult();
+            }
+        }
+
     }
+
 
     // Calculate the n-th root of the current result
     public BigDecimal root(BigDecimal num) {
