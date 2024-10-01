@@ -13,13 +13,11 @@ public class Main {
             menu.LogInCal(); // Logging in calculator
         } else {
             menu.Exiting(); // Exiting calculator
-            System.exit(0);
+            System.exit(0); // Exiting
         }
 
         CalcScreen screen = new CalcScreen(); // Creating object of calculator screens
         screen.init(); // Screen op has started
-
-
 
     }
 }

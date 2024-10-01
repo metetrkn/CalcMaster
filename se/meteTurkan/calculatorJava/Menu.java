@@ -43,8 +43,7 @@ public class Menu {
         System.out.println(
                 "\n1. Addition                2. Subtraction           3. Multiplication\n" +
                         "4. Division                5. Root Extraction       6. Exponentiation\n" +
-                        "7. Multiply with PI        8. Modulus               9. Resetting Result Screen\n" +
-                        "0. To exit");
+                        "7. Multiply with PI        0. To exit");
 
     }
 
@@ -130,7 +129,6 @@ public void explanation() {
 
 
     public void Exiting() {
-        key = false;
         String message = "\nExiting...\n";
         printWithDelay(message);
     }
@@ -144,9 +142,8 @@ public void explanation() {
         operations.put(4, '/');   // Division
         operations.put(5, '√');   // Root Extraction
         operations.put(6, '^');   // Exponentiation
-        operations.put(7, 'π');   // Multiply with PI (use 'π' directly)
-        operations.put(8, '%');   // Modulus
-        operations.put(9, 'C');   // Resetting Result Screen
+        operations.put(7, '%');   // Modulus
+
 
         // Return the corresponding character or a default character if not found
         return operations.getOrDefault(operation, '?'); // '?' for unknown operation
