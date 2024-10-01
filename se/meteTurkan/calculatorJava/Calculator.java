@@ -24,25 +24,25 @@ public class Calculator {
     // Addition
     public BigDecimal add(BigDecimal num) {
         result = result.add(num, mc);
-        return result;
+        return getResult();
     }
 
     // Subtraction
     public BigDecimal subtract(BigDecimal num) {
         result = result.subtract(num, mc);
-        return result;
+        return getResult();
     }
 
     // Multiplication
     public BigDecimal  multiply(BigDecimal num) {
         result = result.multiply(num, mc);
-        return result;
+        return getResult();
     }
 
     // Dividing
     public BigDecimal divide(BigDecimal num) {
         result = result.divide(num, mc);
-        return result;
+        return getResult();
     }
 
     // Calculate the n-th root of the current result
@@ -50,33 +50,18 @@ public class Calculator {
         int n = num.intValue(); // num is the n-th root
         BigDecimal x = new BigDecimal(Math.pow(result.doubleValue(), 1.0 / n));
         result = x.setScale(mc.getPrecision(), RoundingMode.HALF_UP);
-        return result;
+        return getResult();
     }
 
     // Modulus operator - gets remaining
     public BigDecimal remainder(BigDecimal num) {
         result = result.remainder(num);
-        return result;
+        return getResult();
     }
 
     // Exponential
     public BigDecimal pow(BigDecimal num) {
-        result = result.pow(num.intValue(), mc);
-        return result;
+        return getResult();
     }
 }
-
-
-
-//    // To reset result screen
-//    public void setNull() {
-//        this.result = 0.0;
-//    }
-//
-
-//
-//    public double multiplyPI (double num) {
-//        result *= Math.PI;
-//        return getResult();
-//    }
 

@@ -82,37 +82,17 @@ public class CalcScreen {
                     num = res;
                     break;
                 }
-                case 8: {
+                case 7: {
                     res = cal.remainder(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;
                     break;
                 }
-
+                default:
+                    System.out.println("\nA problem has occurred!\n");
             }
         }
     }
 }
-//                } case 7: {
-//                    /**
-//                     * pi ILE ISLEM YAP
-//                     * SONUCU PRINT EYLE
-//                     * OPERASYON SOR
-//                     * NUM GUNCELLE - OPTIONAL
-//                     * BREAK
-//                     */
-//                    res = cal.multiplyPI(num);
-//                    System.out.printf("%s * π = %s\n", num.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-//                    menu.operationMenu();
-//                    num = res; /* !!!!!!!!!!!!!!!!!!!!!!!!!calisip calispmamisina göre bu kismi sil */
-//                    break;
-
-//                case 9: {
-//                    cal.setNull();
-//                    System.out.println("\nResult screen:  0");
-//                    num = checkDigit.init(); // prompting user to input 1st digit
-//                    break;
-//                }
-
 
