@@ -14,26 +14,26 @@ CalculatorJava is a simple command-line calculator application written in Java. 
 1. **Enter the First Number:**
    The program prompts you to enter the first number and press Enter.
 
-Result screen: // Enter the 1st digit then press Enter
+      Result screen: // Enter the 1st digit then press Enter
 
 
 2. **Choose an Operation:**
 After entering the first number, you can choose an operation by entering the corresponding number and pressing Enter.
 
-1. Addition 2. Subtraction 3. Multiplication
-4. Division 0. To exit
+      1. Addition 2. Subtraction 3. Multiplication
+      4. Division 0. To exit
 
 
 3. **Enter the Second Number:**
 The program then prompts you to enter the second number and press Enter.
 
-Result screen: // Enter the 2nd number then press Enter
+      Result screen: // Enter the 2nd number then press Enter
 
 
 4. **View the Result:**
 The program displays the result of the operation on the screen.
 
-Result screen: // Displays the result
+   Result screen: // Displays the result
 
 
 ## Code Structure
