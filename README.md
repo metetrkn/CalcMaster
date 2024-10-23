@@ -8,9 +8,6 @@ CalculatorJava is a simple command-line calculator application written in Java. 
 - Subtraction
 - Multiplication
 - Division
-- Root Extraction
-- Exponentiation
-- Modulus
 
 ## How to Use
 
@@ -24,8 +21,7 @@ Result screen: // Enter the 1st digit then press Enter
 After entering the first number, you can choose an operation by entering the corresponding number and pressing Enter.
 
 1. Addition 2. Subtraction 3. Multiplication
-4. Division 5. Root Extraction 6. Exponentiation
-7. Modulus 0. To exit
+4. Division 0. To exit
 
 
 3. **Enter the Second Number:**
