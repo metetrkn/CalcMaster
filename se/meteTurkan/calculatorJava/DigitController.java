@@ -4,6 +4,12 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class DigitController {
+    private Scanner scanner;
+
+    public DigitController(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public BigDecimal init() {
         // Get user input
         String userInput = getUserInput();
@@ -22,8 +28,7 @@ public class DigitController {
     }
 
     // Method to prompt user to input only digits and at most one dot to create a valid decimal number
-    public static String getUserInput() {
-        Scanner scanner = new Scanner(System.in);
+    public String getUserInput() {
         String input;
         boolean valid;
 

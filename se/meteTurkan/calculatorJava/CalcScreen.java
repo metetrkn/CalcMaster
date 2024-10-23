@@ -1,6 +1,7 @@
 package se.meteTurkan.calculatorJava;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class CalcScreen {
     // Class attributes
@@ -8,12 +9,19 @@ public class CalcScreen {
     BigDecimal num2; // Second inputted number in calculator
     BigDecimal res; // Result of calculation
 
+    Menu menu;
+    Scanner scanner;
+
+    public CalcScreen( Menu menu, Scanner scanner) {
+        this.menu = menu;
+        this.scanner = scanner;
+    }
+
     public void init() {
         // Creating objects of related classes
         Calculator cal = new Calculator();
-        Menu menu = new Menu();
-        OptionController checkOpt = new OptionController();
-        DigitController checkDigit = new DigitController();
+        OptionController checkOpt = new OptionController(scanner);
+        DigitController checkDigit = new DigitController(scanner);
 
 
         // Getting 1st number from user
@@ -63,27 +71,6 @@ public class CalcScreen {
                 }
                 case 4: {
                     res = cal.divide(num2);
-                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-                    num = res;
-                    break;
-                }
-                case 5: {
-                    res = cal.root(num2);
-                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-                    num = res;
-                    break;
-                }
-                case 6: {
-                    res = cal.pow(num2);
-                    System.out.printf("\nResult screen:  %s %s %s = %s\n",
-                            num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
-                    num = res;
-                    break;
-                }
-                case 7: {
-                    res = cal.remainder(num2);
                     System.out.printf("\nResult screen:  %s %s %s = %s\n",
                             num.stripTrailingZeros().toPlainString(), menu.OperationSymbols(calOp), num2.stripTrailingZeros().toPlainString(), res.stripTrailingZeros().toPlainString());
                     num = res;

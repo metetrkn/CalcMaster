@@ -1,12 +1,16 @@
 package se.meteTurkan.calculatorJava;
 
 import java.util.Map;
-import java.util.Scanner;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Menu {
     boolean key = false; // Key to enter into calculator
+    private Scanner userInput; // User input object
 
+    public Menu(Scanner scanner) {
+        this.userInput = scanner;
+    }
 
 
     // Printing out message from top to bottom line by line func
@@ -42,8 +46,7 @@ public class Menu {
     public void operationMenu() {
         System.out.println(
                 "\n1. Addition                2. Subtraction           3. Multiplication\n" +
-                        "4. Division                5. Root Extraction       6. Exponentiation\n" +
-                        "7. Multiply with PI        0. To exit");
+                        "4. Division                0. To exit");
 
     }
 
@@ -83,8 +86,7 @@ public void explanation() {
     }
 
     public int userChoice() {
-        Scanner userInput = new Scanner(System.in); // User input object
-        OptionController inputC = new OptionController(); // Creating object
+        OptionController inputC = new OptionController(userInput); // Creating object
         // Calling Input Checker to check if user input a valid option
         //Checking user option (0,1) - possible min,max value
         return inputC.checker(0,1);
@@ -125,9 +127,6 @@ public void explanation() {
         operations.put(2, '-');   // Subtraction
         operations.put(3, '*');   // Multiplication
         operations.put(4, '/');   // Division
-        operations.put(5, '√');   // Root Extraction
-        operations.put(6, '^');   // Exponentiation
-        operations.put(7, '%');   // Modulus
 
 
         // Return the corresponding character or a default character if not found

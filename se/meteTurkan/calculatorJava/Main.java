@@ -1,12 +1,14 @@
 package se.meteTurkan.calculatorJava;
 
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Menu menu = new Menu(); // Creating menu object
+        Scanner scanner = new Scanner(System.in);
+        Menu menu = new Menu(scanner); // Creating menu object
+
         menu.welcoming(); // Welcoming user
         menu.explanation(); // Explaining user how to use program
-
 
         int choice = menu.userChoice(); // User choice (1-calculator / 0-exit)
         if (choice == 1) {
@@ -16,8 +18,10 @@ public class Main {
             System.exit(0); // Exiting
         }
 
-        CalcScreen screen = new CalcScreen(); // Creating object of calculator screens
+        CalcScreen screen = new CalcScreen(menu, scanner); // Creating object of calculator screens
         screen.init(); // Screen op has started
+
+        scanner.close(); // Closing scanner
 
     }
 }

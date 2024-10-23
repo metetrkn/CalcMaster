@@ -3,16 +3,15 @@ package se.meteTurkan.calculatorJava;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class OptionController {
-    // Creating Calculator object to be able to manipulate private result attribute
-    // for multiply pi function and set-null function
-    Calculator cal = new Calculator();
 
-    // Creating calScreen object to manipulate numbers for multiply pi function and set-null function
-    CalcScreen screen = new CalcScreen();
+public class OptionController {
+    private Scanner myInput;
+
+    public OptionController(Scanner scanner) {
+        this.myInput = scanner;
+    }
 
     public int checker(int minOption, int maxOption) {
-        Scanner  myInput = new Scanner(System.in); // Creating scanner object
         int choice = -1;
 
         // Checking if user inputted valid value
@@ -20,6 +19,7 @@ public class OptionController {
             try {
                 System.out.printf("Press [%d-%d] to make operations.\n", minOption, maxOption); // Prompt user to input
                 choice = myInput.nextInt(); // Read user input
+                myInput.nextLine();
 
                 if (choice >= minOption && choice <= maxOption) { // Check if input is within range
                     break; // Exit loop if valid input
