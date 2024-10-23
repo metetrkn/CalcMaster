@@ -20,8 +20,8 @@ CalculatorJava is a simple command-line calculator application written in Java. 
 2. **Choose an Operation:**
 After entering the first number, you can choose an operation by entering the corresponding number and pressing Enter.
 
-      1. Addition 2. Subtraction 3. Multiplication
-      4. Division 0. To exit
+      I. Addition II. Subtraction III. Multiplication
+      IV. Division 0. To exit
 
 
 3. **Enter the Second Number:**
